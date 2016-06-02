@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular ToDo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../bower_components/Materialize/dist/css/materialize.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="angularTodo">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper blue darken-4">
+          <a href="#!" class="brand-logo"> <i class="large material-icons">insert_chart</i> to-do app</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#!">Menu 1</a></li>
+            <li><a href="#!">Menu 2</a></li>
+            <li><a href="#!">Menu 3</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <ng-view></ng-view>
+
+    <footer class="page-footer blue darken-4">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Menu 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Menu 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Menu 3</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2016 Copyright Text
+        </div>
+      </div>
+    </footer>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/Materialize/dist/js/materialize.js"></script>
+    <script src="bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/routes/list.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

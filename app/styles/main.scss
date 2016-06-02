@@ -1,0 +1,26 @@
+@import "Materialize/sass/materialize.scss";
+
+html {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.brand-logo {
+  margin-left: 30px;
+
+  i {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+.parallax-container {
+  .new-note-card {
+    margin-top: 80px;
+  }
+
+  input[type=text]:focus:not([readonly]) + label {
+    border-bottom: 1px solid #1E88E5 !important;
+    box-shadow: 0 1px 0 0 #1E88E5 !important;
+  }
+}
