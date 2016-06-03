@@ -11,4 +11,4 @@ var APP_NAME = 'angularTodo';
  * Main module of the application.
  */
 angular
-  .module(APP_NAME, ['ngAnimate', 'ngResource', 'ngRoute', 'oc.lazyLoad'])
+  .module(APP_NAME, ['ngAnimate', 'ngResource', 'ngRoute', 'oc.lazyLoad', 'ngMockE2E'])

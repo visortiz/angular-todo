@@ -19,8 +19,30 @@ html {
     margin-top: 80px;
   }
 
-  input[type=text]:focus:not([readonly]) + label {
-    border-bottom: 1px solid #1E88E5 !important;
-    box-shadow: 0 1px 0 0 #1E88E5 !important;
+  .input-field input[type=text]:focus + label,
+  .input-field textarea:focus + label {
+    color: #3949ab !important;
   }
+
+  .input-field input[type=text]:focus,
+  .input-field textarea:focus {
+    border-bottom: 1px solid #3949ab !important;
+    box-shadow: 0 1px 0 0 #3949ab !important;
+  }
+}
+
+.card-notes {
+  padding-bottom: 30px;
+
+  .card-content {
+    word-wrap: break-word;
+  }
+
+  a {
+    margin-left: 15px;
+  }
+}
+
+.modal-content {
+  word-wrap: break-word;
 }
