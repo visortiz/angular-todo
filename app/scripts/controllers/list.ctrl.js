@@ -14,7 +14,6 @@ function ListCtrl($scope, list) {
   this.list = list.data;
 
   this.initParallax = _initParallax();
-  this.cleanForm = _cleanForm();
   this.saveNewNote = _saveNewNote;
   this.deleteNote = _deleteNote;
 
@@ -46,8 +45,6 @@ function ListCtrl($scope, list) {
     vm.list.some(function(element, idx) {
       if (element.id === id) {
         vm.list.splice(vm.list.indexOf(element), 1);
-      //   console.log(id, idx);
-      //   vm.list.splice(idx, 1);
         $scope.$apply();
         $('#modal_' + id).closeModal();
         $('.lean-overlay').remove();

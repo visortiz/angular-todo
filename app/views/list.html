@@ -1,18 +1,3 @@
-<!-- Modal Trigger -->
-  <!-- <button data-target="modal1" class="btn modal-trigger">Modal</button> -->
-
-  <!-- Modal Structure -->
-  <!-- <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Delete Note</h4>
-      <p>Are you sure you want to delete this note?</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Delete</a>
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</a>
-    </div>
-  </div> -->
-
 <div class="parallax-container">
 
   <div class="parallax"><img src="./imgs/paralax_1.jpg"></div>
@@ -68,8 +53,15 @@
         </div>
 
         <a class="waves-effect waves-light btn blue"><i class="material-icons right">mode_edit</i>edit</a>
-        <!-- <a class="waves-effect waves-light btn blue"><i class="material-icons right">delete</i>delete</a> -->
         <alert-msg data-id="{{todo.id}}" data-title="{{todo.title}}" delete-note="list.deleteNote(id)"></alert-msg>
+      </div>
+    </div>
+
+    <div class="col s12 column center-align" ng-if="list.list.length < 1">
+      <div class="card indigo darken-1 card-notes">
+        <div class="card-content white-text">
+          <h5 class="valign">Nothing to show.</h5>
+        </div>
       </div>
     </div>
 
