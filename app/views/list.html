@@ -9,27 +9,28 @@
               <form>
                 <div class="row">
                   <div class="input-field col s12">
-                    <input ng-model="list.title"
+                    <input ng-model="list.formModel.title"
                            id="new-title"
                            type="text"
                            required>
-                    <label class="label-new-note" for="new-title">Title</label>
+                    <label class="label-new-note" ng-class="{active: list.formModel.title}" for="new-title">Title</label>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="input-field col s12">
-                    <textarea ng-model="list.text"
+                    <textarea ng-model="list.formModel.text"
                               id="new-text"
                               class="materialize-textarea"
                               required></textarea>
-                    <label class="label-new-note" for="new-text">Text</label>
+                    <label class="label-new-note" for="new-text"
+                           ng-class="{active: list.formModel.text}">Text</label>
                   </div>
                 </div>
             </form>
             </div>
             <div class="card-action right-align">
-              <button ng-click="list.saveNewNote()"
+              <button ng-click="list.saveNote()"
                       class="btn waves-effect waves-light blue darken-1"
                       type="submit"
                       name="action">Save
@@ -47,13 +48,21 @@
 
     <div class="col s12 column" ng-repeat="todo in list.list | orderBy: '-id'">
       <div class="card indigo darken-1 card-notes">
+
         <div class="card-content white-text">
           <span class="card-title">{{todo.title}}</span>
           <p>{{todo.text}}</p>
         </div>
 
-        <a class="waves-effect waves-light btn blue"><i class="material-icons right">mode_edit</i>edit</a>
-        <alert-msg data-id="{{todo.id}}" data-title="{{todo.title}}" delete-note="list.deleteNote(id)"></alert-msg>
+        <a ng-click="list.editNote(todo.id)" class="waves-effect waves-light btn blue">
+          <i class="material-icons right">mode_edit</i>
+          EDIT
+        </a>
+
+        <alert-msg data-id="{{todo.id}}"
+                   data-title="{{todo.title}}"
+                   delete-note="list.deleteNote(id)">
+        </alert-msg>
       </div>
     </div>
 
