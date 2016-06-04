@@ -4,9 +4,7 @@ var APP_NAME = 'angularTodo';
 
 /**
  * @ngdoc overview
- * @name edoolsApp
- * @description
- * # edoolsApp
+ * @name angularTodo
  *
  * Main module of the application.
  */

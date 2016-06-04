@@ -20,7 +20,6 @@ function listRouteConfig($routeProvider) {
   function _filesResolve($ocLazyLoad) {
     return $ocLazyLoad.load([
       'scripts/controllers/list.ctrl.js',
-      'scripts/filters/searchfor.js',
       'scripts/directives/alert-msg.js'
     ]);
   }

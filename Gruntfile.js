@@ -49,7 +49,7 @@ module.exports = function (grunt) {
         files: [
           '<%= todoapp.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
-          '<%= todoapp.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+          '<%= todoapp.app %>/imgs/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
     },
@@ -210,13 +210,13 @@ module.exports = function (grunt) {
       options: {
         sassDir: '<%= todoapp.app %>/styles',
         cssDir: '.tmp/styles',
-        generatedImagesDir: '.tmp/images/generated',
-        imagesDir: '<%= todoapp.app %>/images',
+        generatedImagesDir: '.tmp/imgs/generated',
+        imagesDir: '<%= todoapp.app %>/imgs',
         javascriptsDir: '<%= todoapp.app %>/scripts',
         fontsDir: '<%= todoapp.app %>/styles/fonts',
         importPath: './bower_components',
-        httpImagesPath: '/images',
-        httpGeneratedImagesPath: '/images/generated',
+        httpImagesPath: '/imgs',
+        httpGeneratedImagesPath: '/imgs/generated',
         httpFontsPath: '/styles/fonts',
         relativeAssets: false,
         assetCacheBuster: false,
@@ -224,7 +224,7 @@ module.exports = function (grunt) {
       },
       dist: {
         options: {
-          generatedImagesDir: '<%= todoapp.dist %>/images/generated'
+          generatedImagesDir: '<%= todoapp.dist %>/imgs/generated'
         }
       },
       server: {
@@ -239,7 +239,7 @@ module.exports = function (grunt) {
         src: [
           '<%= todoapp.dist %>/scripts/{,*/}*.js',
           '<%= todoapp.dist %>/styles/{,*/}*.css',
-          '<%= todoapp.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+          '<%= todoapp.dist %>/imgs/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= todoapp.dist %>/styles/fonts/*'
         ]
       }
@@ -268,11 +268,11 @@ module.exports = function (grunt) {
       options: {
         assetsDirs: [
           '<%= todoapp.dist %>',
-          '<%= todoapp.dist %>/images',
+          '<%= todoapp.dist %>/imgs',
           '<%= todoapp.dist %>/styles'
         ],
         patterns: {
-          js: [[/(images\/[^''""]*\.(png|jpg|jpeg|gif|webp|svg))/g, 'Replacing references to images']]
+          js: [[/(imgs\/[^''""]*\.(png|jpg|jpeg|gif|webp|svg))/g, 'Replacing references to images']]
         }
       }
     },
@@ -281,9 +281,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= todoapp.app %>/images',
+          cwd: '<%= todoapp.app %>/imgs',
           src: '{,*/}*.{png,jpg,jpeg,gif}',
-          dest: '<%= todoapp.dist %>/images'
+          dest: '<%= todoapp.dist %>/imgs'
         }]
       }
     },
@@ -292,9 +292,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= todoapp.app %>/images',
+          cwd: '<%= todoapp.app %>/imgs',
           src: '{,*/}*.svg',
-          dest: '<%= todoapp.dist %>/images'
+          dest: '<%= todoapp.dist %>/imgs'
         }]
       }
     },
@@ -356,13 +356,13 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '*.html',
-            'images/{,*/}*.{webp}',
+            'imgs/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*'
           ]
         }, {
           expand: true,
-          cwd: '.tmp/images',
-          dest: '<%= todoapp.dist %>/images',
+          cwd: '.tmp/imgs',
+          dest: '<%= todoapp.dist %>/imgs',
           src: ['generated/*']
         }, {
           expand: true,
